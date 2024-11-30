@@ -1,0 +1,8 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 0 auto;
+    text-align: justify;
+    background-color: #ceebf5;
+    margin-bottom: 100px;
+}

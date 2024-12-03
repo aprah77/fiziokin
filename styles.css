@@ -3,8 +3,9 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
   }
-  
-  .navbar {
+
+/* General Navbar Styling */
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -12,19 +13,89 @@ body {
     color: white;
     padding: 1rem;
     z-index: 1000;
-    display: flex;
-    justify-content: center;
   }
   
-  .navbar nav a {
+  .navbar nav {
+    display: flex;
+    justify-content: space-between; /* Push links to the left and switcher to the right */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+  }
+  
+  .navbar .nav-links a {
     color: white;
     margin: 0 1rem;
     text-decoration: none;
   }
   
-  .navbar nav a:hover {
+  .navbar .nav-links a:hover {
     text-decoration: underline;
   }
+  
+  /* Language Switcher */
+  .navbar .language-switch {
+    position: relative; /* For dropdown positioning */
+    margin-right: 2rem;
+  }
+  
+  .navbar .dropbtn {
+    background-color: #65a765; /* Match navbar color */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .dropbtn img.flag {
+    width: 20px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+  
+  /* Dropdown Content */
+  .navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position dropdown below button */
+    right: 0; /* Align dropdown to the right edge of the language switcher */
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 4px;
+    min-width: 120px;
+  }
+  
+  .navbar .dropdown-content a {
+    color: black;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .dropdown-content a img.flag {
+    width: 20px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+  
+  .navbar .dropdown-content a:hover {
+    background-color: #f1f1f1; /* Subtle hover effect */
+  }
+  
+  /* Show Dropdown on Hover */
+  .navbar .language-switch:hover .dropdown-content {
+    display: block;
+  }  
   
   main {
     padding-top: 4rem;

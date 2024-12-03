@@ -2,15 +2,98 @@
 
 <html lang="si">
     <head>
-        <link href=""styles.css" rel=""stylesheet">
-        <title>Fiziokin</title>
+        <link href="styles.css" rel="stylesheet">
+       
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
+
+        <meta charset="utf-8">
+        <meta name="author" content="Alja Prah">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>FizioKin</title>
     </head>
     <body>
-        <script>
-            
-        </script>
-        <h1>gotta start somewhere</h1>
-        <p>test</p>
-        <p>test2</p>
+        <header class="navbar">
+            <nav>
+              <a href="#section1">Domov</a>
+              <a href="#section2">O meni</a>
+              <a href="#section3">Storitve</a>
+              <a href="#section4">Najem aparatov</a>
+              <a href="#section5">Kontakt</a>
+            </nav>
+          </header>
+          <main>
+            <section id="section1">Domov</section>
+            <section id="section2">O meni</section>
+            <section id="section3">Storitve</section>
+            <section id="section4">Najem aparatov</section>
+            <section id="section5">
+                <div class="contact-container">
+                  <!-- Contact Form -->
+                  <div class="contact-form">
+                    <h2>Pišite nam</h2>
+                    <form>
+                      <label for="name">Ime</label>
+                      <input type="text" id="name" name="name" placeholder="Ime in priimek" required>
+              
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Email" required>
+              
+                      <label for="message">Sporočilo</label>
+                      <textarea id="message" name="message" placeholder="Vaše sporočilo" rows="7" required></textarea>
+              
+                      <button type="submit">Pošlji</button>
+                    </form>
+                  </div>
+              
+                  <!-- Map and Contact Info -->
+                  <div class="map-info-container">
+                    <!-- Map -->
+                    <div class="map-container">
+                      <h2>Najdite nas</h2>
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.0843959067183!2d15.664675912635515!3d46.466836270987656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f7bdd3c086ef5%3A0xa32a0d6bd6ebcaa8!2sLe%C5%A1nikova%20ulica%203%2C%202312%20Orehova%20vas!5e0!3m2!1ssl!2ssi!4v1733248648001!5m2!1ssl!2ssi" 
+                        width="100%" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"></iframe>
+                    </div>
+              
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                      <div class="address">
+                        <h3>Naslov</h3>
+                        <p>Lešnikova ulica 3<br>2312 Orehova vas</p>
+                      </div>
+                      <div class="phone-email">
+                        <h3>Kotakt</h3>
+                        <p>Telefon: 051 617 751</p>
+                        <p>Email: info@fiziokin.si</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sponsors -->
+                <div class="sponsors-section">
+                    <h2>Zavarovalnice s katerimi sodelujem</h2>
+                    <div class="sponsors-logos">
+                        <div class="sponsor-logo">
+                          <img src="images/zav1.png" alt="Zavarovalnica Triglav">
+                        </div>
+                        <div class="sponsor-logo">
+                          <img src="images/zav2.jpeg" alt="Zavarovalnica Sava">
+                        </div>
+                        <div class="sponsor-logo">
+                          <img src="images/zav3.png" alt="Generali">
+                        </div>
+                        <div class="sponsor-logo">
+                          <img src="images/zav4.jpg" alt="Grawe">
+                        </div>
+                      </div>                      
+                </div>
+            </section>                            
+          </main>
+          <script src="scripts.js"></script>
     </body>
 </html>

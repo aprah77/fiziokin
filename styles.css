@@ -9,8 +9,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #65a765;
-    color: white;
+    background: #ffffff;
+    color: #65a765;
     padding: 1rem;
     z-index: 1000;
   }
@@ -30,7 +30,7 @@ body {
   }
   
   .navbar .nav-links a {
-    color: white;
+    color: #65a765;
     margin: 0 1rem;
     text-decoration: none;
   }
@@ -46,8 +46,8 @@ body {
   }
   
   .navbar .dropbtn {
-    background-color: #65a765; /* Match navbar color */
-    color: white;
+    background-color: #ffffff; /* Match navbar color */
+    color: #000000;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -161,7 +161,7 @@ body {
     margin: 2rem auto;
     text-align: center;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     background: #e6ffe6;
     padding: 2rem;
     border-radius: 10px;
@@ -196,8 +196,8 @@ body {
   .quote-controls {
     position: absolute;
     top: 50%;
-    left: 1rem;
-    right: 1rem;
+    left: 2rem;
+    right: 2rem;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
@@ -254,7 +254,10 @@ body {
     margin-bottom: 0.5rem;
   }  
 
-  #section3 { background: #ffffff; }
+  #section3 { 
+    background: #65a765;
+    color: #ffffff }
+  
   #section4 { background: #ffffff; }
 
 /* Section 5 Styling */

@@ -44,9 +44,23 @@ function moveToQuote(index) {
 function prevQuote() {
   currentIndex--;
   moveToQuote(currentIndex);
+  resetAutoSlide();
 }
 
 function nextQuote() {
   currentIndex++;
   moveToQuote(currentIndex);
+  resetAutoSlide();
 }
+
+// Automatic sliding
+let autoSlideTimer = setInterval(nextQuote, 3000); // Change quote every 3 seconds
+
+function resetAutoSlide() {
+  clearInterval(autoSlideTimer);
+  autoSlideTimer = setInterval(nextQuote, 3000);
+}
+
+// Event listeners for arrows
+document.querySelector('.quote-arrow.prev').addEventListener('click', prevQuote);
+document.querySelector('.quote-arrow.next').addEventListener('click', nextQuote);

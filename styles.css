@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
   }
 
@@ -105,22 +105,164 @@ body {
     padding: 2rem;
   }
   
+  /*
   #section1 { background: linear-gradient(to bottom, #e6ffe6, #ffffff); }
   #section2 { background: linear-gradient(to bottom, #ffffff, #e6ffe6); }
   #section3 { background: linear-gradient(to bottom, #e6ffe6, #ffffff); }
   #section4 { background: linear-gradient(to bottom, #ffffff, #e6ffe6); }
-  /*
-  #section1 { background: #e6ffe6; }
-  #section2 { background: #ffffff; }
-  #section3 { background: #e6ffe6; }
+  */
+  #section1 { background: #ffffff; }
+
+/* General Section Styling */
+#section2 {
+    background: #ffffff; /* Matches your existing theme */
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Part 1: Info Block */
+  .info-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .info-block .text {
+    flex: 1;
+  }
+  
+  .info-block .text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .info-block .text p {
+    font-size: 1.2rem;
+  }
+  
+  .info-block .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .info-block .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Part 2: Quotes Block */
+  .quotes-block {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    background: #dffcdc;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .quote-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .quote-slide {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quote-text {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .quote-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .quote-controls {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Allows clicks to pass through empty space */
+  }
+  
+  .quote-arrow {
+    background: #65a765;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    pointer-events: all; /* Ensures buttons are clickable */
+    z-index: 10;
+  }
+  
+  .quote-arrow:hover {
+    background: #4e8b4e;
+  }
+  
+  /* Additional tweaks for alignment */
+  .quote-arrow:first-of-type {
+    margin-left: -2rem; /* Adjusts the left arrow position */
+  }
+  
+  .quote-arrow:last-of-type {
+    margin-right: -2rem; /* Adjusts the right arrow position */
+  }
+  
+  
+  /* Part 3: Workshops Block */
+  .workshops-block {
+    text-align: center;
+  }
+  
+  .workshops-block h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .workshops-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .workshops-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .workshops-list ul li {
+    margin-bottom: 0.5rem;
+  }  
+
+  #section3 { background: #ffffff; }
   #section4 { background: #ffffff; }
-*/
+
 /* Section 5 Styling */
 #section5 {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background: linear-gradient(to bottom, #e6ffe6, #ffffff);
+/*    background: linear-gradient(to bottom, #e6ffe6, #ffffff); */
+    background: #ffffff
   }
   
   /* Contact Form and Map Container */

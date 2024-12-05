@@ -7,6 +7,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
         <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
         <meta charset="utf-8">
         <meta name="author" content="Alja Prah">
         <meta name="viewport" content="initial-scale=1, width=device-width">
@@ -16,7 +20,7 @@
         <header class="navbar">
             <nav>
               <div class="nav-links">
-                <a href="#section1">Domov</a>
+                <a href="#section1">FIZIOKIN</a>
                 <a href="#section2">O meni</a>
                 <a href="#section3">Storitve</a>
                 <a href="#section4">Najem aparatov</a>
@@ -38,8 +42,51 @@
             </nav>
           </header>          
           <main>
-            <section id="section1">Domov</section>
-            <section id="section2">O meni</section>
+            <section id="section1"></section>
+            <section id="section2">
+                <div class="info-block">
+                  <div class="text">
+                    <h2>O meni</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                  </div>
+                  <div class="image">
+                    <img src="images/tina-kobale.jpg" alt="Tina Kobale">
+                  </div>
+                </div>
+              
+                <div class="quotes-block">
+                    <div class="quote-wrapper">
+                      <div class="quote-slide">
+                        <p id="quote-text" class="quote-text">"Tina je super!"</p>
+                        <p id="quote-author" class="quote-author">- Ilka Štuhec</p>
+                      </div>
+                    </div>
+                    <div class="quote-controls">
+                      <button class="quote-arrow" onclick="prevQuote()">&#8592;</button>
+                      <button class="quote-arrow" onclick="nextQuote()">&#8594;</button>
+                    </div>
+                </div>                  
+              
+                <div class="workshops-block">
+                  <h3>Izobraževanja</h3>
+                  <div class="workshops-list">
+                    <div>
+                      <ul>
+                        <li>Seminar 1</li>
+                        <li>Delavnica A</li>
+                        <li>Dogodek B</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul>
+                        <li>Seminar 2</li>
+                        <li>Delavnica C</li>
+                        <li>Dogodek D</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </section>              
             <section id="section3">Storitve</section>
             <section id="section4">Najem aparatov</section>
             <section id="section5">
@@ -82,7 +129,7 @@
                         <p>Lešnikova ulica 3<br>2312 Orehova vas</p>
                       </div>
                       <div class="phone-email">
-                        <h3>Kotakt</h3>
+                        <h3>Kontakt</h3>
                         <p>Telefon: 051 617 751</p>
                         <p>Email: info@fiziokin.si</p>
                       </div>

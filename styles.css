@@ -26,6 +26,7 @@ body {
   
   .navbar .nav-links {
     display: flex;
+    font-weight: bold;
   }
   
   .navbar .nav-links a {
@@ -161,7 +162,7 @@ body {
     text-align: center;
     position: relative;
     overflow: visible;
-    background: #dffcdc;
+    background: #e6ffe6;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -200,7 +201,7 @@ body {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    pointer-events: none; /* Allows clicks to pass through empty space */
+    pointer-events: none;
   }
   
   .quote-arrow {
@@ -211,7 +212,7 @@ body {
     border-radius: 5px;
     font-size: 1.5rem;
     cursor: pointer;
-    pointer-events: all; /* Ensures buttons are clickable */
+    pointer-events: all;
     z-index: 10;
   }
   
@@ -219,18 +220,18 @@ body {
     background: #4e8b4e;
   }
   
-  /* Additional tweaks for alignment */
   .quote-arrow:first-of-type {
-    margin-left: -2rem; /* Adjusts the left arrow position */
+    margin-left: -2rem;
   }
   
   .quote-arrow:last-of-type {
-    margin-right: -2rem; /* Adjusts the right arrow position */
+    margin-right: -2rem;
   }
   
   
   /* Part 3: Workshops Block */
   .workshops-block {
+    margin-top: 5rem;
     text-align: center;
   }
   

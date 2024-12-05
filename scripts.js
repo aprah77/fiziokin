@@ -7,41 +7,46 @@ document.querySelectorAll('nav a').forEach(link => {
     });
   });  
 
-// Quotes Data
-const quotes = [
-    { text: "Tina je super!", author: "Ilka Štuhec" },
-    { text: "Tina je neverjetna!", author: "Anja Šešum" },
-    { text: "Tina je res fajn!", author: "Nataša Pirc Musar" },
-    { text: "Tina je še kr OK!", author: "Robert Golob" },
-    { text: "Tina je v redu!", author: "Albert Einstein" },
-  ];
-  
-let currentQuote = 0;
+let currentIndex = 0;
+const quotes = document.querySelectorAll('.quote-slide');
+const totalQuotes = quotes.length;
+const wrapper = document.querySelector('.quote-wrapper');
 
-function showQuoteWithSlide(index) {
-const quoteWrapper = document.querySelector(".quote-wrapper");
-const quoteSlides = quotes.map(
-    (quote) =>
-    `<div class="quote-slide">
-        <p class="quote-text">"${quote.text}"</p>
-        <p class="quote-author">- ${quote.author}</p>
-    </div>`
-);
-quoteWrapper.innerHTML = quoteSlides.join("");
-quoteWrapper.style.transform = `translateX(-${index * 100}%)`;
+// Clone the first and last slides for seamless looping
+const firstClone = quotes[0].cloneNode(true);
+const lastClone = quotes[totalQuotes - 1].cloneNode(true);
+
+// Add the clones to the wrapper
+wrapper.appendChild(firstClone);
+wrapper.insertBefore(lastClone, quotes[0]);
+
+// Adjust the wrapper's transform for the initial visible slide
+wrapper.style.transform = `translateX(-100%)`; // Start at the real first slide
+
+function moveToQuote(index) {
+  wrapper.style.transition = 'transform 0.5s ease-in-out';
+  wrapper.style.transform = `translateX(-${(index + 1) * 100}%)`;
+
+  // Handle transition to clones for seamless looping
+  wrapper.addEventListener('transitionend', () => {
+    if (index === -1) {
+      wrapper.style.transition = 'none';
+      wrapper.style.transform = `translateX(-${totalQuotes * 100}%)`;
+      currentIndex = totalQuotes - 1;
+    } else if (index === totalQuotes) {
+      wrapper.style.transition = 'none';
+      wrapper.style.transform = 'translateX(-100%)';
+      currentIndex = 0;
+    }
+  }, { once: true });
 }
 
 function prevQuote() {
-currentQuote = (currentQuote - 1 + quotes.length) % quotes.length;
-showQuoteWithSlide(currentQuote);
+  currentIndex--;
+  moveToQuote(currentIndex);
 }
 
 function nextQuote() {
-currentQuote = (currentQuote + 1) % quotes.length;
-showQuoteWithSlide(currentQuote);
+  currentIndex++;
+  moveToQuote(currentIndex);
 }
-
-// Initialize the first quote and add slide effect
-document.addEventListener("DOMContentLoaded", () => {
-showQuoteWithSlide(currentQuote);
-});

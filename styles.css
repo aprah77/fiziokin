@@ -595,7 +595,7 @@ section {
 footer {
   background-color: #cbb2b5; /* Section-specific background */
   color: white;
-  padding: 2rem 0; /* Vertical spacing */
+  padding: 2rem 1rem; /* Vertical spacing */
   text-align: center;
 }
 
@@ -613,7 +613,6 @@ footer {
   color: white;
   margin: 0 15px;
   text-decoration: none;
-  font-size: 16px;
 }
 
 .footer-links a:hover {
@@ -622,8 +621,8 @@ footer {
 
 .social-icons {
   margin: 1rem 0;
-  display: flex; /* Make it a flex container */
-  justify-content: center; /* Center the icons */
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons a {
@@ -634,7 +633,7 @@ footer {
 .social-icons .social-icon {
   width: 50px;
   height: 50px;
-  display: block; /* Ensure the image takes up its space properly */
+  display: block;
 }
 
 .social-icons a:hover .social-icon {
@@ -642,6 +641,31 @@ footer {
 }
 
 .copyright {
+  font-size: 0.875rem;
   margin-top: 1rem;
-  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a {
+    margin: 5px 0;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .social-icons .social-icon {
+    width: 25px;
+    height: 25px;
+  }
 }

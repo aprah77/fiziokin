@@ -1,12 +1,3 @@
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      document.querySelector(link.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });  
-
 let currentIndex = 0;
 const quotes = document.querySelectorAll('.quote-slide');
 const totalQuotes = quotes.length;

@@ -64,3 +64,19 @@ function resetAutoSlide() {
 // Event listeners for arrows
 document.querySelector('.quote-arrow.prev').addEventListener('click', prevQuote);
 document.querySelector('.quote-arrow.next').addEventListener('click', nextQuote);
+
+// Flipping cards
+document.querySelectorAll('.find-out-more').forEach(button => {
+  button.addEventListener('click', () => {
+    const flipCard = button.closest('.flip-card');
+    flipCard.classList.add('flipped');
+  });
+});
+
+document.querySelectorAll('.turn-back').forEach(button => {
+  button.addEventListener('click', () => {
+    const flipCard = button.closest('.flip-card');
+    flipCard.classList.remove('flipped');
+  });
+});
+

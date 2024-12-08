@@ -3,22 +3,18 @@ const quotes = document.querySelectorAll('.quote-slide');
 const totalQuotes = quotes.length;
 const wrapper = document.querySelector('.quote-wrapper');
 
-// Clone the first and last slides for seamless looping
 const firstClone = quotes[0].cloneNode(true);
 const lastClone = quotes[totalQuotes - 1].cloneNode(true);
 
-// Add the clones to the wrapper
 wrapper.appendChild(firstClone);
 wrapper.insertBefore(lastClone, quotes[0]);
 
-// Adjust the wrapper's transform for the initial visible slide
-wrapper.style.transform = `translateX(-100%)`; // Start at the real first slide
+wrapper.style.transform = `translateX(-100%)`;
 
 function moveToQuote(index) {
   wrapper.style.transition = 'transform 0.5s ease-in-out';
   wrapper.style.transform = `translateX(-${(index + 1) * 100}%)`;
 
-  // Handle transition to clones for seamless looping
   wrapper.addEventListener('transitionend', () => {
     if (index === -1) {
       wrapper.style.transition = 'none';
@@ -44,19 +40,16 @@ function nextQuote() {
   resetAutoSlide();
 }
 
-// Automatic sliding
-let autoSlideTimer = setInterval(nextQuote, 3000); // Change quote every 3 seconds
+let autoSlideTimer = setInterval(nextQuote, 3000);
 
 function resetAutoSlide() {
   clearInterval(autoSlideTimer);
   autoSlideTimer = setInterval(nextQuote, 3000);
 }
 
-// Event listeners for arrows
 document.querySelector('.quote-arrow.prev').addEventListener('click', prevQuote);
 document.querySelector('.quote-arrow.next').addEventListener('click', nextQuote);
 
-// Flipping cards
 document.querySelectorAll('.find-out-more').forEach(button => {
   button.addEventListener('click', () => {
     const flipCard = button.closest('.flip-card');

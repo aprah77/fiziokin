@@ -9,12 +9,11 @@ body {
   }
 
 .content-container {
-  max-width: 1200px; /* Maximum width of the content */
-  margin: 0 auto; /* Center the content */
-  padding: 0 1rem; /* Add some padding for smaller screens */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* General Navbar Styling */
 .navbar {
   position: fixed;
   top: 0;
@@ -27,7 +26,7 @@ body {
 
 .navbar nav {
   display: flex;
-  justify-content: space-between; /* Push links to the left and switcher to the right */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1200px;
@@ -49,14 +48,13 @@ body {
   text-decoration: underline;
 }
 
-/* Language Switcher */
 .navbar .language-switch {
-  position: relative; /* For dropdown positioning */
+  position: relative;
   margin-right: 2rem;
 }
 
 .navbar .dropbtn {
-  background-color: #ffffff; /* Match navbar color */
+  background-color: #ffffff;
   color: #000000;
   border: none;
   padding: 0.5rem 1rem;
@@ -72,12 +70,11 @@ body {
   margin-right: 0.5rem;
 }
 
-/* Dropdown Content */
 .navbar .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%; /* Position dropdown below button */
-  right: 0; /* Align dropdown to the right edge of the language switcher */
+  top: 100%;
+  right: 0;
   background-color: white;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
@@ -100,10 +97,9 @@ body {
 }
 
 .navbar .dropdown-content a:hover {
-  background-color: #f1f1f1; /* Subtle hover effect */
+  background-color: #f1f1f1;
 }
 
-/* Show Dropdown on Hover */
 .navbar .language-switch:hover .dropdown-content {
   display: block;
 }  
@@ -122,9 +118,8 @@ section {
 
 /* SECTION 2 */
 
-/* General Section Styling */
 #section2 {
-  background: #ffffff; /* Matches your existing theme */
+  background: #ffffff;
   padding: 2rem;
   font-family: 'Poppins', sans-serif;
 }
@@ -266,28 +261,28 @@ section {
 
 /* General Styles */
 .full-width-background {
-  background-color: #cbb2b5; /* Section-specific background */
-  padding: 2rem 0; /* Vertical spacing */
-  width: 100%; /* Ensure it spans the full width of the viewport */
+  background-color: #cbb2b5;
+  padding: 2rem 0;
+  width: 100%;
 }
 
 .full-width-background .content-container {
-  max-width: 1200px; /* Keep the content constrained */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* Padding for smaller screens */
+  padding: 0 1rem;
   color: #ffffff;
 }
 
 /* Flip Card Container */
 .flip-container {
   perspective: 1000px;
-  margin-bottom: 2rem; /* Add spacing between cards */
+  margin-bottom: 2rem;
 }
 
 .flip-card {
   position: relative;
   width: 100%;
-  max-width: 1000px; /* Set a reasonable max width for the cards */
+  max-width: 1000px;
   margin: 0 auto;
   height: 400px;
 }
@@ -422,7 +417,7 @@ section {
 }
 
 .equipment-item:nth-child(even) {
-  grid-template-columns: 1fr 1fr; /* Same layout for even rows */
+  grid-template-columns: 1fr 1fr;
 }
 
 .equipment-text {
@@ -447,13 +442,12 @@ section {
   border-radius: 10px;
 }
 
-/* Adjust for alternating layouts */
 .equipment-item:nth-child(even) {
-  grid-template-areas: "image text"; /* Image on the left for even rows */
+  grid-template-areas: "image text";
 }
 
 .equipment-item:nth-child(odd) {
-  grid-template-areas: "text image"; /* Image on the right for odd rows */
+  grid-template-areas: "text image";
 }
 
 .equipment-item:nth-child(odd) .equipment-text {
@@ -593,9 +587,9 @@ section {
 }
 
 footer {
-  background-color: #cbb2b5; /* Section-specific background */
+  background-color: #cbb2b5;
   color: white;
-  padding: 2rem 1rem; /* Vertical spacing */
+  padding: 2rem 1rem;
   text-align: center;
 }
 

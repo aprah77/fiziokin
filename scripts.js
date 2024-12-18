@@ -64,3 +64,31 @@ document.querySelectorAll('.turn-back').forEach(button => {
   });
 });
 
+// mail form with EmailJS
+document.addEventListener("DOMContentLoaded", function () {
+
+  emailjs.init("7wK173sx0dlPrc75i"); // public API key
+
+  console.log("EmailJS has been initialized");
+
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const serviceID = "service_ab605me"; // service ID
+      const templateID = "template_kk105qi"; // template ID
+
+      emailjs.sendForm(serviceID, templateID, form)
+          .then(
+              function () {
+                  alert("Vaše sporočilo je bilo poslano! Odgovorili bomo v najkrajšem možnem času.");
+                  form.reset();
+              },
+              function (error) {
+                  alert("Prišlo je do napake. Prosim, poskusite ponovno.");
+                  console.error("EmailJS error:", error);
+              }
+          );
+  });
+});
